@@ -47,6 +47,10 @@ struct SetDeck {
         }
         return initBoardCards
     }
+    
+   
+    
+    
 }
 
 extension Int {
@@ -60,3 +64,4 @@ extension Int {
         }
     }
 }
+
