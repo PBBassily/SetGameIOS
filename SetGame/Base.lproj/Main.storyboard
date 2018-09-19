@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina5_9" orientation="portrait">
+    <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -17,161 +17,195 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SetGame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IdK-p0-bHL">
-                                <rect key="frame" x="121" y="832" width="60" height="30"/>
-                                <color key="backgroundColor" red="0.0" green="0.98106676339999999" blue="0.57369142770000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="3 More !">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                            </button>
-                            <stackView opaque="NO" contentMode="redraw" fixedFrame="YES" axis="vertical" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="CJs-0x-loh">
-                                <rect key="frame" x="10" y="23" width="356" height="766"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <stackView opaque="NO" contentMode="redraw" axis="vertical" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="CJs-0x-loh" userLabel="board">
+                                <rect key="frame" x="10" y="30" width="394.66666666666669" height="626.66666666666663"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="q5M-ly-9Ko">
-                                        <rect key="frame" x="0.0" y="0.0" width="356" height="121"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="q5M-ly-9Ko">
+                                        <rect key="frame" x="0.0" y="0.0" width="394.66666666666669" height="97.666666666666671"/>
                                         <subviews>
-                                            <view contentMode="redraw" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wCB-gN-dQR" customClass="SetCardUI" customModule="SetGame" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="83" height="121"/>
+                                            <view contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="wCB-gN-dQR" customClass="SetCardUI" customModule="SetGame" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="92.666666666666671" height="97.666666666666671"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <gestureRecognizers/>
                                             </view>
-                                            <view contentMode="redraw" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sFQ-v0-2Rx" customClass="SetCardUI" customModule="SetGame" customModuleProvider="target">
-                                                <rect key="frame" x="91" y="0.0" width="83" height="121"/>
+                                            <view contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="sFQ-v0-2Rx" customClass="SetCardUI" customModule="SetGame" customModuleProvider="target">
+                                                <rect key="frame" x="100.66666666666666" y="0.0" width="92.666666666666657" height="97.666666666666671"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </view>
-                                            <view contentMode="redraw" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8Ee-j7-rXE" customClass="SetCardUI" customModule="SetGame" customModuleProvider="target">
-                                                <rect key="frame" x="182" y="0.0" width="83" height="121"/>
+                                            <view contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="8Ee-j7-rXE" customClass="SetCardUI" customModule="SetGame" customModuleProvider="target">
+                                                <rect key="frame" x="201.33333333333334" y="0.0" width="92.666666666666657" height="97.666666666666671"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </view>
-                                            <view contentMode="redraw" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="z2L-rX-3mW" customClass="SetCardUI" customModule="SetGame" customModuleProvider="target">
-                                                <rect key="frame" x="273" y="0.0" width="83" height="121"/>
-                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            </view>
-                                        </subviews>
-                                    </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="gJz-X4-0nA">
-                                        <rect key="frame" x="0.0" y="129" width="356" height="121"/>
-                                        <subviews>
-                                            <view contentMode="redraw" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Jh4-PA-7Kl" customClass="SetCardUI" customModule="SetGame" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="83" height="121"/>
-                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            </view>
-                                            <view contentMode="redraw" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5Yn-UO-SL9" customClass="SetCardUI" customModule="SetGame" customModuleProvider="target">
-                                                <rect key="frame" x="91" y="0.0" width="83" height="121"/>
-                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            </view>
-                                            <view contentMode="redraw" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Fcc-FU-t0T" customClass="SetCardUI" customModule="SetGame" customModuleProvider="target">
-                                                <rect key="frame" x="182" y="0.0" width="83" height="121"/>
-                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            </view>
-                                            <view contentMode="redraw" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wVD-Pb-72c" customClass="SetCardUI" customModule="SetGame" customModuleProvider="target">
-                                                <rect key="frame" x="273" y="0.0" width="83" height="121"/>
+                                            <view contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="z2L-rX-3mW" customClass="SetCardUI" customModule="SetGame" customModuleProvider="target">
+                                                <rect key="frame" x="302" y="0.0" width="92.666666666666686" height="97.666666666666671"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </view>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Hff-pP-Rh7">
-                                        <rect key="frame" x="0.0" y="258" width="356" height="121"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="gJz-X4-0nA">
+                                        <rect key="frame" x="0.0" y="105.66666666666666" width="394.66666666666669" height="98"/>
                                         <subviews>
-                                            <view contentMode="redraw" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BoR-Lz-6Bs" customClass="SetCardUI" customModule="SetGame" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="83" height="121"/>
+                                            <view contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="Jh4-PA-7Kl" customClass="SetCardUI" customModule="SetGame" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="92.666666666666671" height="98"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </view>
-                                            <view contentMode="redraw" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eEf-qA-dbn" customClass="SetCardUI" customModule="SetGame" customModuleProvider="target">
-                                                <rect key="frame" x="91" y="0.0" width="83" height="121"/>
+                                            <view contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="5Yn-UO-SL9" customClass="SetCardUI" customModule="SetGame" customModuleProvider="target">
+                                                <rect key="frame" x="100.66666666666666" y="0.0" width="92.666666666666657" height="98"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </view>
-                                            <view contentMode="redraw" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hDA-Zf-s5P" customClass="SetCardUI" customModule="SetGame" customModuleProvider="target">
-                                                <rect key="frame" x="182" y="0.0" width="83" height="121"/>
+                                            <view contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="Fcc-FU-t0T" customClass="SetCardUI" customModule="SetGame" customModuleProvider="target">
+                                                <rect key="frame" x="201.33333333333334" y="0.0" width="92.666666666666657" height="98"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </view>
-                                            <view contentMode="redraw" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Pf9-xq-7Mb" customClass="SetCardUI" customModule="SetGame" customModuleProvider="target">
-                                                <rect key="frame" x="273" y="0.0" width="83" height="121"/>
+                                            <view contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="wVD-Pb-72c" customClass="SetCardUI" customModule="SetGame" customModuleProvider="target">
+                                                <rect key="frame" x="302" y="0.0" width="92.666666666666686" height="98"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </view>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Uod-bp-P7Q">
-                                        <rect key="frame" x="0.0" y="387" width="356" height="121"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Hff-pP-Rh7">
+                                        <rect key="frame" x="0.0" y="211.66666666666666" width="394.66666666666669" height="97.666666666666657"/>
                                         <subviews>
-                                            <view contentMode="redraw" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GUT-oh-uWm" customClass="SetCardUI" customModule="SetGame" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="83" height="121"/>
+                                            <view contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="BoR-Lz-6Bs" customClass="SetCardUI" customModule="SetGame" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="92.666666666666671" height="97.666666666666671"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </view>
-                                            <view contentMode="redraw" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vII-Vr-YMh" customClass="SetCardUI" customModule="SetGame" customModuleProvider="target">
-                                                <rect key="frame" x="91" y="0.0" width="83" height="121"/>
+                                            <view contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="eEf-qA-dbn" customClass="SetCardUI" customModule="SetGame" customModuleProvider="target">
+                                                <rect key="frame" x="100.66666666666666" y="0.0" width="92.666666666666657" height="97.666666666666671"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </view>
-                                            <view contentMode="redraw" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="q0x-Bo-PfJ" customClass="SetCardUI" customModule="SetGame" customModuleProvider="target">
-                                                <rect key="frame" x="182" y="0.0" width="83" height="121"/>
+                                            <view contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="hDA-Zf-s5P" customClass="SetCardUI" customModule="SetGame" customModuleProvider="target">
+                                                <rect key="frame" x="201.33333333333334" y="0.0" width="92.666666666666657" height="97.666666666666671"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </view>
-                                            <view contentMode="redraw" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="paL-0S-sVs" customClass="SetCardUI" customModule="SetGame" customModuleProvider="target">
-                                                <rect key="frame" x="273" y="0.0" width="83" height="121"/>
+                                            <view contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="Pf9-xq-7Mb" customClass="SetCardUI" customModule="SetGame" customModuleProvider="target">
+                                                <rect key="frame" x="302" y="0.0" width="92.666666666666686" height="97.666666666666671"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </view>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="hPy-gx-rB6">
-                                        <rect key="frame" x="0.0" y="516" width="356" height="121"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Uod-bp-P7Q">
+                                        <rect key="frame" x="0.0" y="317.33333333333331" width="394.66666666666669" height="97.666666666666686"/>
                                         <subviews>
-                                            <view contentMode="redraw" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OVU-mS-9b0" customClass="SetCardUI" customModule="SetGame" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="83" height="121"/>
+                                            <view contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="GUT-oh-uWm" customClass="SetCardUI" customModule="SetGame" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="92.666666666666671" height="97.666666666666671"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </view>
-                                            <view contentMode="redraw" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8XR-KB-mey" customClass="SetCardUI" customModule="SetGame" customModuleProvider="target">
-                                                <rect key="frame" x="91" y="0.0" width="83" height="121"/>
+                                            <view contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="vII-Vr-YMh" customClass="SetCardUI" customModule="SetGame" customModuleProvider="target">
+                                                <rect key="frame" x="100.66666666666666" y="0.0" width="92.666666666666657" height="97.666666666666671"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </view>
-                                            <view contentMode="redraw" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FEc-s9-kOB" customClass="SetCardUI" customModule="SetGame" customModuleProvider="target">
-                                                <rect key="frame" x="182" y="0.0" width="83" height="121"/>
+                                            <view contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="q0x-Bo-PfJ" customClass="SetCardUI" customModule="SetGame" customModuleProvider="target">
+                                                <rect key="frame" x="201.33333333333334" y="0.0" width="92.666666666666657" height="97.666666666666671"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </view>
-                                            <view contentMode="redraw" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="X8L-WE-Fyv" customClass="SetCardUI" customModule="SetGame" customModuleProvider="target">
-                                                <rect key="frame" x="273" y="0.0" width="83" height="121"/>
+                                            <view contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="paL-0S-sVs" customClass="SetCardUI" customModule="SetGame" customModuleProvider="target">
+                                                <rect key="frame" x="302" y="0.0" width="92.666666666666686" height="97.666666666666671"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </view>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="YWW-vP-ak1">
-                                        <rect key="frame" x="0.0" y="645" width="356" height="121"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="hPy-gx-rB6">
+                                        <rect key="frame" x="0.0" y="423" width="394.66666666666669" height="98"/>
                                         <subviews>
-                                            <view contentMode="redraw" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rAM-hE-WWF" customClass="SetCardUI" customModule="SetGame" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="83" height="121"/>
+                                            <view contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="OVU-mS-9b0" customClass="SetCardUI" customModule="SetGame" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="92.666666666666671" height="98"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </view>
-                                            <view contentMode="redraw" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="z3g-qR-BoM" customClass="SetCardUI" customModule="SetGame" customModuleProvider="target">
-                                                <rect key="frame" x="91" y="0.0" width="83" height="121"/>
+                                            <view contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="8XR-KB-mey" customClass="SetCardUI" customModule="SetGame" customModuleProvider="target">
+                                                <rect key="frame" x="100.66666666666666" y="0.0" width="92.666666666666657" height="98"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </view>
-                                            <view contentMode="redraw" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3oR-eP-cIU" customClass="SetCardUI" customModule="SetGame" customModuleProvider="target">
-                                                <rect key="frame" x="182" y="0.0" width="83" height="121"/>
+                                            <view contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="FEc-s9-kOB" customClass="SetCardUI" customModule="SetGame" customModuleProvider="target">
+                                                <rect key="frame" x="201.33333333333334" y="0.0" width="92.666666666666657" height="98"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </view>
-                                            <view contentMode="redraw" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cPE-aM-su5" customClass="SetCardUI" customModule="SetGame" customModuleProvider="target">
-                                                <rect key="frame" x="273" y="0.0" width="83" height="121"/>
+                                            <view contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="X8L-WE-Fyv" customClass="SetCardUI" customModule="SetGame" customModuleProvider="target">
+                                                <rect key="frame" x="302" y="0.0" width="92.666666666666686" height="98"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </view>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="YWW-vP-ak1">
+                                        <rect key="frame" x="0.0" y="529" width="394.66666666666669" height="97.666666666666629"/>
+                                        <subviews>
+                                            <view contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="rAM-hE-WWF" customClass="SetCardUI" customModule="SetGame" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="92.666666666666671" height="97.666666666666671"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </view>
+                                            <view contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="z3g-qR-BoM" customClass="SetCardUI" customModule="SetGame" customModuleProvider="target">
+                                                <rect key="frame" x="100.66666666666666" y="0.0" width="92.666666666666657" height="97.666666666666671"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </view>
+                                            <view contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="3oR-eP-cIU" customClass="SetCardUI" customModule="SetGame" customModuleProvider="target">
+                                                <rect key="frame" x="201.33333333333334" y="0.0" width="92.666666666666657" height="97.666666666666671"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </view>
+                                            <view contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="cPE-aM-su5" customClass="SetCardUI" customModule="SetGame" customModuleProvider="target">
+                                                <rect key="frame" x="302" y="0.0" width="92.666666666666686" height="97.666666666666671"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </view>
                                         </subviews>
                                     </stackView>
                                 </subviews>
                             </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="h1W-fT-VXj" userLabel="toolBar">
+                                <rect key="frame" x="10" y="666.66666666666663" width="394" height="49.333333333333371"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="77n-el-sH7">
+                                        <rect key="frame" x="0.0" y="0.0" width="126" height="49.333333333333336"/>
+                                        <color key="backgroundColor" red="1" green="0.83234566450000003" blue="0.47320586440000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <state key="normal" title="New Game">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="NewGameButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="65B-o6-lkh"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pj9-bL-n3s">
+                                        <rect key="frame" x="134" y="0.0" width="126" height="49.333333333333336"/>
+                                        <color key="backgroundColor" red="0.0" green="0.98106676339999999" blue="0.57369142770000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <state key="normal" title="3 More !">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="moreThreeCardsButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rXk-vw-Tpr"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score: 0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vnf-K7-vdo">
+                                        <rect key="frame" x="268" y="0.0" width="126" height="49.333333333333336"/>
+                                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                        <size key="shadowOffset" width="-7" height="-1"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="h1W-fT-VXj" secondAttribute="height" multiplier="400 : 50" id="OzS-H5-6hG"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="0.58081901069999997" green="0.088427625600000004" blue="0.31863921880000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="IdK-p0-bHL" secondAttribute="trailing" constant="20" symbolic="YES" id="AkY-nI-nMT"/>
-                            <constraint firstItem="IdK-p0-bHL" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="121" id="VHx-Wc-vC7"/>
-                            <constraint firstAttribute="bottomMargin" secondItem="IdK-p0-bHL" secondAttribute="bottom" constant="-84" id="uto-Ky-WaE"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="h1W-fT-VXj" secondAttribute="bottom" constant="20" id="Cao-h2-Ydb"/>
+                            <constraint firstItem="CJs-0x-loh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="MNi-6y-cBS"/>
+                            <constraint firstItem="CJs-0x-loh" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="SsW-ZF-JZc"/>
+                            <constraint firstItem="h1W-fT-VXj" firstAttribute="top" secondItem="CJs-0x-loh" secondAttribute="bottom" constant="10" id="UUa-i6-mqQ"/>
+                            <constraint firstItem="h1W-fT-VXj" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" constant="-10" id="YcN-8e-1jP"/>
+                            <constraint firstItem="h1W-fT-VXj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="mRM-6G-yGn"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="CJs-0x-loh" secondAttribute="trailing" constant="10" id="zzO-42-qQ4"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="scoreLabel" destination="vnf-K7-vdo" id="Yyc-rc-oui"/>
                         <outletCollection property="board" destination="hDA-Zf-s5P" collectionClass="NSMutableArray" id="wGf-13-OpK"/>
                         <outletCollection property="board" destination="5Yn-UO-SL9" collectionClass="NSMutableArray" id="OiX-OK-Pn7"/>
                         <outletCollection property="board" destination="vII-Vr-YMh" collectionClass="NSMutableArray" id="AvO-vd-g3P"/>
@@ -200,7 +234,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="117.59999999999999" y="118.22660098522168"/>
+            <point key="canvasLocation" x="117.39130434782609" y="118.20652173913044"/>
         </scene>
     </scenes>
 </document>

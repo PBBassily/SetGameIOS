@@ -12,16 +12,20 @@ import UIKit
 class SetCardUI: UIView {
     
     
-     var num   = 3 {didSet {setNeedsDisplay()}}
+    var num   = 3
     
-     var color  = SymbolColor.color1 {didSet {setNeedsDisplay()}}
+    var color  = SymbolColor.color1
     
-     var symbol  = Symbol.symbol1 {didSet {setNeedsDisplay()}}
+    var symbol  = Symbol.symbol1
     
-     var shading  = ShadingStyle.striped {didSet {setNeedsDisplay()}}
+    var shading  = ShadingStyle.striped 
     
-    var isHiddenCard: Bool = true {didSet {setNeedsDisplay()}}
-    var isSelected : Bool = false {didSet{setNeedsDisplay()}}
+    var viewControllerInst = UIApplication.shared.windows[0].rootViewController as? ViewController
+    
+    
+    var isHiddenCard: Bool = true {didSet {setNeedsDisplay();setNeedsLayout()
+        }}
+    var isSelected : Bool = false {didSet{setNeedsDisplay();setNeedsLayout()}}
     var index : Int = -1
     
     
@@ -35,8 +39,12 @@ class SetCardUI: UIView {
     }
     
     @objc func handleTap(_ sender: UITapGestureRecognizer? = nil) {
-        print("hello from code")
+        
         isSelected =  !isSelected
+        
+        
+        
+        viewControllerInst!.notifySelection(sender: self)
     }
     
     private lazy var symbolLabel = createUILabel()
@@ -79,7 +87,7 @@ class SetCardUI: UIView {
     }
     
     private var symbolString :NSAttributedString {
-        return centeredAttributedString(String(String(repeating: symbol.rawValue+"\n", count: num).dropLast()), fontSize: CGFloat(45/num))
+        return centeredAttributedString(String(String(repeating: symbol.rawValue+"\n", count: num).dropLast()), fontSize: CGFloat(30/num))
     }
     
     
@@ -98,10 +106,10 @@ class SetCardUI: UIView {
         
         
         if !isHiddenCard {
-           self.alpha = 1
+            self.alpha = 1
             if isSelected {
                 UIColor.black.setStroke()
-               
+                
             }else {
                 UIColor.clear.setStroke()
                 
@@ -149,7 +157,7 @@ class SetCardUI: UIView {
         case symbol1 = "▲"
         case symbol2 = "●"
         case symbol3 = "■"
-     }
+    }
     
 }
 

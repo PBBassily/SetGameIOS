@@ -8,7 +8,8 @@
 
 import Foundation
 
-struct Set : CustomStringConvertible{
+struct Set : CustomStringConvertible ,Equatable, Hashable{
+    
     var description: String {
         return String(num.rawValue)+" "+String(symbol.hashValue)
     }
